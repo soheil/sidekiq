@@ -27,7 +27,7 @@
             </li>
           <% else %>
             <li class="<%= current_path.start_with?(url) ? 'active' : '' %>">
-            <a href="<%= root_path %><%= url %>"><%= t(title) %></a>
+            <a href="<%= root_path %><%= url %><%= '?poll=true' if url =~ /queue/ %>"><%= t(title) %></a>
             </li>
           <% end %>
         <% end %>
